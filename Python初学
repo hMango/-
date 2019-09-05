@@ -1,0 +1,480 @@
+>>> n = input("请输入整数N：")
+请输入整数N：100
+>>> sum = 0
+>>> for i in range(int(n)):
+	sum += i + 1
+
+	
+>>> print("1到N求和结果：",sum)
+1到N求和结果： 5050
+>>> sum, tmp = 0,1
+>>> for i in range(1,11):
+	tmp*=i
+	sum+=tmp
+
+	
+>>> print("运算结果是：{}".format(sum))
+运算结果是：4037913
+>>> for i in range(1,10):
+	for j in range(1,i+1):
+		print("{}*{}={:2} ".format(j,i,i*j), end='')
+	print('')
+
+	
+1*1= 1 
+1*2= 2 2*2= 4 
+1*3= 3 2*3= 6 3*3= 9 
+1*4= 4 2*4= 8 3*4=12 4*4=16 
+1*5= 5 2*5=10 3*5=15 4*5=20 5*5=25 
+1*6= 6 2*6=12 3*6=18 4*6=24 5*6=30 6*6=36 
+1*7= 7 2*7=14 3*7=21 4*7=28 5*7=35 6*7=42 7*7=49 
+1*8= 8 2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64 
+1*9= 9 2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81 
+
+
+
+>>> print("Hello World")
+Hello World
+>>> radius = 25
+>>> area = 3.1415 * radius* radius
+>>> print(area)
+1963.4375000000002
+>>> print("{.2f}".format(area))
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    print("{.2f}".format(area))
+AttributeError: 'float' object has no attribute '2f'
+>>> print("{:.2f}".format(area))
+1963.44
+>>> name = input("输入姓名:")
+输入姓名:郭靖
+>>> print ("{}同学，学好Python，前途无量！".format(name))
+郭靖同学，学好Python，前途无量！
+>>> print("{}大侠，学好Python，大展拳脚！".format(name[0]))
+郭大侠，学好Python，大展拳脚！
+>>> print("{}哥哥，学好Python，人见人爱！".format(name[1:]))
+靖哥哥，学好Python，人见人爱！
+>>> a, b = 0, 1
+>>> while a < 1000:  # 输出不大于1000的序列
+...     print(a, end=',')
+...	a, b = b, a + b
+SyntaxError: expected an indented block
+>>> while a < 1000:  # 输出不大于1000的序列
+...     print(a, end=',')
+...	a, b = b, a + b
+SyntaxError: expected an indented block
+>>>  a, b = 0, 1
+>>> while a < 1000:  # 输出不大于1000的序列
+...     print(a, end=',')
+...	a, b = b, a + b
+SyntaxError: unexpected indent
+>>> a, b = 0, 1
+>>> while a < 1000:
+	print(a, end=',')
+	a, b = b, a+b
+
+	
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
+>>> import tuttle
+Traceback (most recent call last):
+  File "<pyshell#24>", line 1, in <module>
+    import tuttle
+ModuleNotFoundError: No module named 'tuttle'
+>>> import turtle
+>>> turtle.pensize(2)
+>>> turtle.circle(10)
+>>> turtle.circle(40)
+>>> turtle.circle(80)
+>>> turtle.circle(160）
+		  
+SyntaxError: invalid character in identifier
+>>> turtle.circle(160)
+		  
+>>> from datetime import datetime
+		  
+>>> now = datetime.now()
+		  
+>>> print(now)
+		  
+2019-09-05 14:49:54.382600
+>>> now.strftime("%x")
+		  
+'09/05/19'
+>>> now.strftime("%X")
+		  
+'14:49:54'
+>>> str1 = input("请输入一个人的名字：")
+		  
+请输入一个人的名字：张三
+>>> str2 = input("请输入一个国家名字：")
+		  
+请输入一个国家名字：America
+>>> print("世界这么大，{}想去{}看看。".format(str1,str2))
+		  
+世界这么大，张三想去America看看。
+>>> n = input("请输入整数N：")
+		  
+请输入整数N：100
+>>> sum = 0
+		  
+>>> for i in range(int(n)):
+		  sum += i + 1
+print("1到N求和结果：", sum)
+		  
+SyntaxError: invalid syntax
+>>> n = input("请输入整数N：")
+		  
+请输入整数N：100
+>>> sum = 0
+		  
+>>> for i in range(int(n)):
+		  sum += i + 1
+		  
+SyntaxError: multiple statements found while compiling a single statement
+>>> n = input("请输入整数N：")
+		  
+请输入整数N：100
+>>> sum = 0
+		  
+>>> for i in range(int(n)):
+		  sum += i+1
+		  print("1到N求和结果：", sum)
+
+		  
+1到N求和结果： 1
+1到N求和结果： 3
+1到N求和结果： 6
+1到N求和结果： 10
+1到N求和结果： 15
+1到N求和结果： 21
+1到N求和结果： 28
+1到N求和结果： 36
+1到N求和结果： 45
+1到N求和结果： 55
+1到N求和结果： 66
+1到N求和结果： 78
+1到N求和结果： 91
+1到N求和结果： 105
+1到N求和结果： 120
+1到N求和结果： 136
+1到N求和结果： 153
+1到N求和结果： 171
+1到N求和结果： 190
+1到N求和结果： 210
+1到N求和结果： 231
+1到N求和结果： 253
+1到N求和结果： 276
+1到N求和结果： 300
+1到N求和结果： 325
+1到N求和结果： 351
+1到N求和结果： 378
+1到N求和结果： 406
+1到N求和结果： 435
+1到N求和结果： 465
+1到N求和结果： 496
+1到N求和结果： 528
+1到N求和结果： 561
+1到N求和结果： 595
+1到N求和结果： 630
+1到N求和结果： 666
+1到N求和结果： 703
+1到N求和结果： 741
+1到N求和结果： 780
+1到N求和结果： 820
+1到N求和结果： 861
+1到N求和结果： 903
+1到N求和结果： 946
+1到N求和结果： 990
+1到N求和结果： 1035
+1到N求和结果： 1081
+1到N求和结果： 1128
+1到N求和结果： 1176
+1到N求和结果： 1225
+1到N求和结果： 1275
+1到N求和结果： 1326
+1到N求和结果： 1378
+1到N求和结果： 1431
+1到N求和结果： 1485
+1到N求和结果： 1540
+1到N求和结果： 1596
+1到N求和结果： 1653
+1到N求和结果： 1711
+1到N求和结果： 1770
+1到N求和结果： 1830
+1到N求和结果： 1891
+1到N求和结果： 1953
+1到N求和结果： 2016
+1到N求和结果： 2080
+1到N求和结果： 2145
+1到N求和结果： 2211
+1到N求和结果： 2278
+1到N求和结果： 2346
+1到N求和结果： 2415
+1到N求和结果： 2485
+1到N求和结果： 2556
+1到N求和结果： 2628
+1到N求和结果： 2701
+1到N求和结果： 2775
+1到N求和结果： 2850
+1到N求和结果： 2926
+1到N求和结果： 3003
+1到N求和结果： 3081
+1到N求和结果： 3160
+1到N求和结果： 3240
+1到N求和结果： 3321
+1到N求和结果： 3403
+1到N求和结果： 3486
+1到N求和结果： 3570
+1到N求和结果： 3655
+1到N求和结果： 3741
+1到N求和结果： 3828
+1到N求和结果： 3916
+1到N求和结果： 4005
+1到N求和结果： 4095
+1到N求和结果： 4186
+1到N求和结果： 4278
+1到N求和结果： 4371
+1到N求和结果： 4465
+1到N求和结果： 4560
+1到N求和结果： 4656
+1到N求和结果： 4753
+1到N求和结果： 4851
+1到N求和结果： 4950
+1到N求和结果： 5050
+>>> for i in rangge(1,10):
+		  for j in range(1,i+1):
+			  print("{}*{}={:2} ".format(j,i,i*j), end ='')
+		  print('')
+
+		  
+Traceback (most recent call last):
+  File "<pyshell#57>", line 1, in <module>
+    for i in rangge(1,10):
+NameError: name 'rangge' is not defined
+>>> for i in range(1,10):
+		  for j in range(1,i+1):
+		  print("{}*{}={:2} ".format(j,i,i*j), end='')
+		  
+SyntaxError: expected an indented block
+>>> print('')
+		  
+
+>>> for i in range(1,10):
+	for j in range(1,i+1):
+	    print("{}*{}={:2} ".format(j,i,i*j), end='')
+	print('')
+
+		  
+1*1= 1 
+1*2= 2 2*2= 4 
+1*3= 3 2*3= 6 3*3= 9 
+1*4= 4 2*4= 8 3*4=12 4*4=16 
+1*5= 5 2*5=10 3*5=15 4*5=20 5*5=25 
+1*6= 6 2*6=12 3*6=18 4*6=24 5*6=30 6*6=36 
+1*7= 7 2*7=14 3*7=21 4*7=28 5*7=35 6*7=42 7*7=49 
+1*8= 8 2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64 
+1*9= 9 2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81 
+>>> sum, tmp = 0, 1
+		  
+>>> for i in range(1,11):
+       tmp*=i
+       sum+=tmp
+print("运算结果是：{}".format(sum))
+		  
+SyntaxError: invalid syntax
+>>> sum, tmp = 0, 1
+		  
+>>> for i in range(1,11):
+	tmp*=i
+	sum+=tmp
+    print("运算结果是：{}".format(sum))
+		  
+SyntaxError: unindent does not match any outer indentation level
+>>> sum, tmp = 0,1
+		  
+>>> for i in range(1,11):
+		  tmp*=i
+		  suum+=tmp
+	print("运算结果是：{}".format(sum))
+		  
+SyntaxError: unindent does not match any outer indentation level
+>>> sum, tmp = 0,1
+		  
+>>> for i in range(1,11):
+	tmp*=i
+	sum+=tmp
+    print("运算结果是：{}".format(sum))
+		  
+SyntaxError: unindent does not match any outer indentation level
+>>> n = 1
+		  
+>>> for i in range(4,0,-1):
+		  n = (n+1)<<1
+		print(n)
+		  
+SyntaxError: unindent does not match any outer indentation level
+>>> n = 1
+		  
+>>> for i in range(4,0,-1):
+		  n = (n+1)<<1
+
+		  
+>>> print(n)
+		  
+46
+>>> sum, tmp = 0,1
+		  
+>>> for i  in range(1,11):
+		  tmp*=i
+		  sum+=tmp
+
+		  
+>>> print("运算结果是："{}".format(sum))
+	  
+SyntaxError: invalid syntax
+>>> sum, tmp = 0, 1
+	  
+>>> for i in range(1,11):
+	  tmp*=i
+	  sum+=tmp
+
+	  
+>>> print("运算结果是: {}".format(sum))
+	  
+运算结果是: 4037913
+>>> diet = ['西红柿‘， ’花椰菜‘， ’黄瓜‘， ’牛排‘， ’虾仁‘】
+	    
+SyntaxError: EOL while scanning string literal
+>>> diet = ['西红柿', '花椰菜', '黄瓜', '牛排', '虾仁']
+	    
+>>> for x in range(0,5):
+	    for y in range(0,5):
+	    if not(x == y):
+	    
+SyntaxError: expected an indented block
+>>> diet = ['西红柿', '花椰菜', '黄瓜', '牛排', '虾仁']
+	    
+>>> for x in range(0,5):
+	    for y in range(0,5)
+	    
+SyntaxError: invalid syntax
+>>> diet = ['西红柿', '花椰菜', '黄瓜', '牛排', '虾仁']
+	    
+>>> for x in range(0,5):
+	    for y in range(0,5):
+		    if not(x == y):
+			    print("{}{}".format(diet[x], diet[y]))
+
+	    
+西红柿花椰菜
+西红柿黄瓜
+西红柿牛排
+西红柿虾仁
+花椰菜西红柿
+花椰菜黄瓜
+花椰菜牛排
+花椰菜虾仁
+黄瓜西红柿
+黄瓜花椰菜
+黄瓜牛排
+黄瓜虾仁
+牛排西红柿
+牛排花椰菜
+牛排黄瓜
+牛排虾仁
+虾仁西红柿
+虾仁花椰菜
+虾仁黄瓜
+虾仁牛排
+>>> from turtle import *
+	    
+>>> fillcolor("red")
+	    
+>>> begin_fill()
+	    
+>>> while True:
+	    forward(200)
+	    right(144)
+	    if abs(pos()) < 1:
+		    break
+
+>>> end_fill()
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> from turtle import *
+	    
+>>> fillcolor("red")
+	    
+>>> begin_fill()
+	    
+>>> while True:
+	    forward(200)
+	    right(144)
+	    if abs(pos()) < 1:
+		    break
+
+
+
+
+>>> end_fill()
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> from turtle import *
+	    
+>>> fillcolor("red")
+	    
+>>> begin_fill()
+	    
+>>> while True:
+	    forward(200)
+	    right(144)
+	    if abs(pos()) < 1:
+                break
+
+	    
+>>> end_fill()
+	    
+>>> 
+	    
+>>> 
+	    
+>>> 
+	    
+>>> from turtle import *
+	    
+>>> color('red','yellow')
+	    
+>>> begin_fill()
+	    
+>>> while True:
+	    forward(200)
+	    left(170)
+	    if abs(pos()) < 1:
+	        break
+
+	    
+>>> end_fill()
+	    
+>>> done()
+	    
+
