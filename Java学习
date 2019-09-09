@@ -1,0 +1,44 @@
+package com.hit.demo;
+
+class Animal{
+	int Age;
+	public Animal(int a){
+		Age = a;
+	}
+	public Animal(){
+		
+	}
+	public void shout(){
+		System.out.println("动物发出叫声...");
+	}
+}
+class Dog extends Animal{
+	String Name;
+	public Dog(String n) {
+		super(18);
+		Name = n;
+		System.out.println("昵称:"+Name);
+		// TODO Auto-generated constructor stub
+	}
+	public void shout(){
+		System.out.println(Name+"在汪汪叫...");
+	}
+	public void printAge(){
+		System.out.println("年龄:"+Age);
+	}
+}
+public class Main1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("HelloWorld!");
+		Dog dog = new Dog("球球");
+		dog.printAge();
+		dog.shout();
+		
+	}
+
+}
