@@ -1,0 +1,59 @@
+package com.hit.demo;
+
+class Student{
+	String name;
+	int score;
+	public void SetName(String n){
+		name = n;
+	}
+	public String GetName(){
+		return name;
+	}
+	public void SetScore(int s){
+		score = s;
+	}
+	public int GetScore(){
+		return score;
+	}
+	public Student(){
+	
+	}
+	public Student(String n, int s){
+		name = n;
+		score = s;
+	}
+	
+}
+public class Main {
+	public static void main(String[] args){
+		Student s1 = new Student();
+		s1.SetName("张三");
+		s1.SetScore(90);
+		System.out.println(s1.GetName()+" "+s1.GetScore());
+		Student s2 = new Student("王五",100);
+		System.out.println(s2.GetName()+" "+s2.GetScore());
+	}
+}
+
+
+
+package com.hit.demo;
+
+public class Main1 {
+	public static int GetN(int n){
+		if(n ==  1){
+			return 0;
+		}
+		if(n == 2){
+			return 1;
+		}
+		int a = GetN(n-1);
+		int b = GetN(n-2);
+		return a+b;
+	}
+	public static void main(String[] args) {
+		int fib = GetN(4);
+		System.out.println("fib = "+fib);
+	}
+
+}
