@@ -7,54 +7,59 @@ struct Node
 	Node *next;
 };
 
-static int count = 1;
 class CirList
 {
 	public:
 		CirList(int n);
-		int Delete(int p);
+		void Delete(int p);
 	private:
-		Node *first;	
+		Node *head;
 };
 
 CirList::CirList(int n)
 {
 	Node *r, *s;
-	Node *f = new Node;
-	f->data = 1;
-	r = f;
+	head = new Node;
+	head->data = 1;
+	r = head;
 	for(int i = 2; i <= n; i++)
 	{
 		s = new Node;
 		s->data = i;
 		r->next = s; r = s;
 	}
-	r->next = f;
+	r->next = head;
 }
-int CirList::Delete(int p)
+void CirList::Delete(int p)
 {
-	Node *r = first;
-	while(count < p-1)
+	int count = 1;
+	Node *r = head;
+	while(1)
 	{
-		r = r->next;
-		count++;
+		while(count < p-1)
+		{
+			r = r->next;
+			count++;
+		}
+		if(r->next == r)
+		{
+			cout << r->data;
+			break;
+		}
+		Node *q = r->next; 
+		int x = q->data;
+		cout << x << ' ';
+		r->next = q->next;
+		delete q;
+		count = 0;
 	}
-	Node *q = r->next;
-	int x = q->data;
-	r->next = q->next;
-	delete q;
-	first = r->next;
-	return x;
+	
 }
 int main()
 {
 	int N,p;
 	cin >> N >> p;
 	CirList L(N);
-	for(int i = 0; i < N; i++)
-	{
-		if(i == N-1) cout << L.Delete(p);
-		else cout << L.Delete(p) << ' '; 
-	}
+	L.Delete(p);
 	return 0;
 }
