@@ -1,0 +1,13 @@
+List Reverse( List L )
+{
+	List newlist = NULL;
+	List t = NULL;
+	while(L != NULL)
+	{
+		t = L->Next;
+		L->Next = newlist;
+		newlist = L;
+		L = t;
+	}
+	return newlist;
+}
